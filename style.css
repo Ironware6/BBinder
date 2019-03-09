@@ -1,0 +1,136 @@
+img{
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+}
+    
+    body {
+     background-color: #000000;
+     background-image: url("Binder Website.jpg");
+     background-repeat: no-repeat;
+    
+     margin-top: 30px;
+     display: block;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h3 {
+  color:#FFF;
+  font-size: 30pt;
+  margin: 20pt 0pt 20pt 0pt;
+}
+p {
+  font-size: 20pt;
+  color:#FFF;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.flip-card {
+  width: 48%;
+  margin: 1%;
+  /*width + margin-left + margin-right = 50%*/
+  height: 500px;
+  position: relative;
+  perspective: 100vw;
+  float: left;
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .flip-card {
+    width: 31%;
+    margin: 1.16%;
+    /*width + margin-left + margin-right = 33.33%*/
+  }
+}
+
+@media (min-width: 992px) {
+  .flip-card {
+    width: 20%;
+    margin: 1%;
+    /*width + margin-left + margin-right = 25%*/
+  }
+}
+
+.flip-card .front,
+.flip-card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  transition: 0.3s;
+  backface-visibility: hidden;
+  border: 2px solid #333;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.flip-card:hover .front {
+  transform: rotateY(180deg) scale(0.5);
+}
+
+.flip-card .back {
+  background: #333;
+  color: #fff;
+  overflow: hidden;
+  padding: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transform: rotateY(180deg) scale(0.5);
+}
+
+.flip-card:hover .back {
+  transform: rotateY(360deg) scale(1);
+}
